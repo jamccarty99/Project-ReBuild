@@ -1,6 +1,6 @@
 module.exports = {
-    googleClientID: '996999898587-3cc1hmhqf27mhr6rs0p0j3lt2qhib8ag.apps.googleusercontent.com',
-    googleClientSecret: 'EI0nP4cxPPsKXPlGcpVy0uAp',
+    googleClientID: '876260989274-l5q5ru95a0lu2nhba61atse7iubh1os4.apps.googleusercontent.com',
+    googleClientSecret: 'V5aBGcrbY4tsQvMA_AURJuVR',
     mongoURI: 'mongodb://localhost/products',
-    cookieKey: 'cookie',
+    cookieKey: 'fawkes',
   };
