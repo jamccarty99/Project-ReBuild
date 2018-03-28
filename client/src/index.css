@@ -2,6 +2,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url("https://ak0.picdn.net/shutterstock/videos/21027520/thumb/12.jpg");
+  background-size: 100% 1500px;
+
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-color: #beecfa;
+  /* http://www.darrenrochebuilders.com/images/slider/bg1.jpg */
+  
 }
 
 .product-box {
@@ -40,7 +48,7 @@ position: absolute;
 height: 25px;
 width: 25px;
 background-position: -35px -5px;
-background-image: url(../images/amzn-sprite.png);
+/* background-image: url(../images/amzn-sprite.png); */
 background-repeat: no-repeat;
 background-size: 400px 600px;
 -webkit-background-size: 400px 600px;
@@ -63,7 +71,7 @@ vertical-align: top;
 background: #d8dde6;
 display: block;
 padding: 0;
-vertical-align: middle;
+/* vertical-align: middle; */
 height: 31px;
 *height: 29px;
 border: 1px solid;
@@ -195,4 +203,17 @@ background: #f1c860;
 
 .lt-ie9 .a-button-primary:hover .a-button-inner {
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5d78e', endColorstr='#ffeeb933', GradientType=0);
+}
+
+.rebuild-bl {
+  color: #0093B2!important;
+}
+.rebuild-lt {
+  color: #00D3FF!important;
+}
+.rebuild-or {
+  color: #FF7700!important;
+}
+.rebuild-dk {
+  color: #B25300!important;
 }

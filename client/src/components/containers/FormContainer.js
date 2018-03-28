@@ -87,7 +87,21 @@ class FormContainer extends React.Component {
                         <option className="room" value="Garage">Garage</option>
                     </select>
                     </div>
-                <label className="col-sm-1 col-form-label mt-1">sort by:</label>
+                <label className="col-sm-1 col-form-label mt-1">Quantity Lost:</label>
+                    <div className="col-sm-2.5">
+                    <select className="form-control mt-3" value={this.state.price} onChange={this.handlePriceChange}>
+                        <option className="price" value="lowest">Price: Low to High</option>
+                        <option className="price" value="highest">Price: High to Low</option>
+                    </select>
+                    </div>
+                <label className="col-sm-1 col-form-label mt-1">Item Age:</label>
+                    <div className="col-sm-2.5">
+                    <select className="form-control mt-3" value={this.state.price} onChange={this.handlePriceChange}>
+                        <option className="price" value="lowest">Price: Low to High</option>
+                        <option className="price" value="highest">Price: High to Low</option>
+                    </select>
+                    </div>
+                <label className="col-sm-1 col-form-label mt-1">Cost to Replace:</label>
                     <div className="col-sm-2.5">
                     <select className="form-control mt-3" value={this.state.price} onChange={this.handlePriceChange}>
                         <option className="price" value="lowest">Price: Low to High</option>
