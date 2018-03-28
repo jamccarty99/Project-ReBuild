@@ -5,12 +5,13 @@ import "../index.css"
 import Header from './Header'
 import SearchBar from './SearchBar'
 import 'bootstrap/dist/css/bootstrap.css'
+import Data from './data'
 
 const Product = (props) => {
     return (
         <div>
-            <Header />
-            <SearchBar />
+            <Header page={'product'}/>
+            <Data />
         </div>
     )
 }

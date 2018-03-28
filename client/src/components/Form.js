@@ -2,6 +2,7 @@
  import ReactDataGrid from 'react-data-grid';
 // //import { Grid, Input, Select } from 'react-spreadsheet-grid'
  import 'bootstrap/dist/css/bootstrap.css'
+ import Header from './Header'
 
 
 const columns = [{ key: 'id', name: 'ID' }, { key: 'title', name: 'Title' }, { key: 'id', name: 'ID' }, { key: 'title', name: 'Title' }, { key: 'id', name: 'ID' }, { key: 'title', name: 'Title' }, ];
@@ -9,19 +10,25 @@ const rows = [{ id: 1, title: 'Title 1' }, { id: 1, title: 'Title 1' }, { id: 1,
 const rowGetter = rowNumber => rows[rowNumber];
 
 const Form = () => {
-  return (<ReactDataGrid
-    columns={columns}
-    rowGetter={rowGetter}
-    rowsCount={rows.length}
-    minHeight={500} />);
+    return (
+        <div>
+            <Header page={'form'}/>
+        
+            <ReactDataGrid
+                columns={columns}
+                rowGetter={rowGetter}
+                rowsCount={rows.length}
+            />
+        </div>
+    )
 }
 // const rows=[
 //     { id: 'user1', formId: 3244, itemId: 1, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v7', title: 'Kitchen Aid Stand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
 //     { id: 'user1', formId: 3244, itemId: 2, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v2', title: 'Hand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
-//     { id: 'user1', formId: 3244, itemId: 1, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v7', title: 'Kitchen Aid Stand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
-//     { id: 'user1', formId: 3244, itemId: 2, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v2', title: 'Hand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
-//     { id: 'user1', formId: 3244, itemId: 1, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v7', title: 'Kitchen Aid Stand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
-//     { id: 'user1', formId: 3244, itemId: 2, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v2', title: 'Hand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
+//     { id: 'user1', formId: 3244, itemId: 3, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v7', title: 'Kitchen Aid Stand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
+//     { id: 'user1', formId: 3244, itemId: 4, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v2', title: 'Hand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
+//     { id: 'user1', formId: 3244, itemId: 5, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v7', title: 'Kitchen Aid Stand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
+//     { id: 'user1', formId: 3244, itemId: 6, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v2', title: 'Hand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
 //     // and so on...
 // ];
  

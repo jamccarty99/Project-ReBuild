@@ -6,24 +6,48 @@ import moment from 'moment'
 
 const ROOT_URL = `http://webservices.amazon.com/onca/xml?`;
 const ROOT_URL2 = `http://localhost:5000/`
-//const formData = 'Harry%Potter';
-const time = new Date;
+//const formData = 'Harry%Potter';`${search.toString().replace(" ","%20")}`
 
-export function fetchProducts(formData) {
+
+export function fetchProducts(search) {
+  console.log('passed in', search);
+  
+  let keywords = `${search.search.toString().replace(" ","%20")}`;
   const getAmazonItemInfo = (keywords) => {
+   
+    function timestamp() {
+      var date = new Date();
+      var y = date.getUTCFullYear().toString();
+      var m = (date.getUTCMonth() + 1).toString();
+      var d = date.getUTCDate().toString();
+      var h = date.getUTCHours().toString();
+      var min = date.getUTCMinutes().toString();
+      var s = date.getUTCSeconds().toString();
+  
+      if(m.length < 2) { m = "0" + m; }
+      if(d.length < 2) { d = "0" + d; }
+      if(h.length < 2) { h = "0" + h; }
+      if(min.length < 2) { min = "0" + min; }
+      if(s.length < 2) { s = "0" + s}
+  
+      var date = y + "-" + m + "-" + d;
+      var time = h + ":" + min + ":" + s;
+      return date + "T" + time + "Z";
+    }
+  
 
-    let date = moment().startOf().add(-9, 'hours').format("YYYY-MM-DDThh:mm:ss.000") + 'Z'
+    let date = timestamp();
     let SecretKey = "GENERATED_IN_AFFILATES_ACCOUNT";
     let AccessKey = "GENERATED_IN_AFFILATES_ACCOUNT";
     let AssociateTag = "FOUND_IN_AFFILATES_ACCOUNT";
     let parameters = [];
-    //let url = 'webservices.amazon.co.uk' // UK account
     let url = 'webservices.amazon.com'// US account
   
     parameters.push("AWSAccessKeyId=" + accessId);
     parameters.push("Keywords=" + keywords);
     parameters.push("Operation=ItemSearch");
     parameters.push("SearchIndex=All");
+    parameters.push("Condition=New");
     parameters.push("ResponseGroup=" + encodeURIComponent('Images,ItemAttributes,Offers'));
     parameters.push("Service=AWSECommerceService");
     parameters.push("Timestamp=" + encodeURIComponent(date));
@@ -33,15 +57,19 @@ export function fetchProducts(formData) {
     let paramString = parameters.join('&');
     let string_to_sign = "GET\n" + url + "\n" + "/onca/xml\n" + paramString
   
-    let signature = CryptoJS.HmacSHA256(string_to_sign, secret);
-    signature = CryptoJS.enc.Base64.stringify(signature);
+    let result = CryptoJS.HmacSHA256(string_to_sign, secret);
+    let signature = CryptoJS.enc.Base64.stringify(result);
+    console.log('signature', signature);
+    let signed = `${signature.replace("+", "%2B").replace("+", "%2B").replace("+", "%2B").replace("=", "%3D")}`;
   
-    let amazonUrl = "http://" + url + "/onca/xml?" + paramString + "&Signature=" + signature;
+    let amazonUrl = "http://" + url + "/onca/xml?" + paramString + "&Signature=" + signed;
+      
+      
     return amazonUrl;
   }
   
-  let keywords = 'iphone'
-  console.log(getAmazonItemInfo(keywords))
+  console.log('output', getAmazonItemInfo(keywords))
+  const xml = axios.get(getAmazonItemInfo(keywords))
   //TODO: Sample aws request- use to create my url generator
   // AWSAccessKeyId=AKIAJVKRTFMK3PCCYINQ&
   // AssociateTag=jamccarty99-20&
@@ -80,7 +108,7 @@ export function fetchProducts(formData) {
   // console.log(url);
   
   //response is given in xml and must be converted to json
-  const xml = axios.get(getAmazonItemInfo)
+  
 
   // function xmlToJson(xml) {
   //   var res = {};
@@ -122,7 +150,7 @@ export function fetchProducts(formData) {
   //   return res;
   // };
 
-  console.log(xml);
+  console.log('xml', xml);
   
   return {
     type: FETCH_PRODUCTS,

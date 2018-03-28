@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header page={'home'}/>
         <div className="container">
           <div className="row">
             <div className="col-12">

@@ -6,6 +6,7 @@ import { bindActionCreators } from "redux"
 import { fetchProducts } from '../actions'
 
 
+
 class SearchBar extends React.Component {
     constructor(props) {
         super(props)
@@ -20,24 +21,26 @@ class SearchBar extends React.Component {
 
     handleSearchChange(event) {
         this.setState({search: event.target.value});
+   
+        
     }
 
     handleSubmit(event) {
-        //event.preventDefault();
+        event.preventDefault();
+        
+        this.props.fetchProducts(this.state);
         console.log('handleSubmit log', this.state);
-        this.props.fetchProducts(this.state).then(response => {
-            const products = this.props.products;
-        })
         console.log(this.props);
         
     }
     render() {
+        
         return (
             
             <div className='container'>
                 <form className="form-inline my-2 my-lg-0 d-flex justify-content-center">
-                    <input className="form-control mr-sm-2 glyphicon-search" type="search" placeholder="Search for Items" aria-label="Search" value={this.state.search} onChange={this.handleSearchChange}/>
-                        <button className="btn btn-success my-2 my-sm-0" type="submit" onClick={this.handleSubmit}><Link to='/search'>START a new Search </Link></button>
+                    <input className="form-control mr-sm-2 " type="search" placeholder="Search for Items" aria-label="Search" value={this.state.search} onChange={this.handleSearchChange}/>
+                        <button className="btn btn-success my-2 my-sm-0" type="submit" onClick={this.handleSubmit}><Link to='/search'>START Search </Link></button>
                 </form>
             </div>
         )

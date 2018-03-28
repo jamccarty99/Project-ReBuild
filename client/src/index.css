@@ -2,14 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url("https://ak0.picdn.net/shutterstock/videos/21027520/thumb/12.jpg");
-  background-size: 100% 1500px;
 
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-color: #beecfa;
-  /* http://www.darrenrochebuilders.com/images/slider/bg1.jpg */
-  
 }
 
 .product-box {
