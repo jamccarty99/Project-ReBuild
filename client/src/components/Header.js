@@ -12,21 +12,22 @@ class Header extends Component {
     if(this.props.page == 'home'){
       return (
         <div> 
-          <nav className="navbar navbar-expand-lg navbar-light bg-light text-center">
-            <a className="navbar-brand rebuild-bl" href="/">Project ReBuild</a>
+          <nav className="navbar navbar-expand-lg">
+            <a className="navbar-brand rebuild-bl font-weight-bold text-xl-left" href="/">Project ReBuild</a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav mr-auto">
-                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div className="navbar-nav mr-auto">
+                <div className="dropdown">
+                  <a className="btn dropdown-toggle" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     Helpful Links
                   </a>
-                  <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a className="dropdown-item" href="http://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/fire/home-fire-recovery">American Red Cross</a>
-                    <a className="dropdown-item" href="https://www.usfa.fema.gov/downloads/pdf/publications/fa_46.pdf"></a>
+                    <a className="dropdown-item" href="https://www.usfa.fema.gov/downloads/pdf/publications/fa_46.pdf">FEMA</a>
+                    <a className="dropdown-item" href=""></a>
                   </div>
-                </li>
-              </ul>
-                <a className="btn my-2 my-sm-0 btn-lg rebuild-or" href="/form" >View Form</a>
+                </div>
+              </div>
+                <a className="btn btn-lg btn-rebuild-form" href="/form" >View Form</a>
             </div>
           </nav>
         </div>
@@ -34,8 +35,8 @@ class Header extends Component {
     } else if(this.props.page == 'product') {
       return (
         <div> 
-          <nav className="navbar navbar-expand-lg navbar-light bg-light text-center">
-            <a className="navbar-brand rebuild-bl" href="/">Project ReBuild</a>
+          <nav className="navbar navbar-expand-lg">
+            <a className="navbar-brand rebuild-bl font-weight-bold text-xl-left" href="/">Project ReBuild</a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item dropdown">
@@ -50,7 +51,7 @@ class Header extends Component {
                 </li>
               </ul>
               <SearchBar />
-                <a className="btn my-2 my-sm-0 btn-lg rebuild-or" href="/form" >View Form</a>
+                <a className="btn btn-lg btn-rebuild-form" href="/form" >View Form</a>
             </div>
           </nav>
         </div>
@@ -58,8 +59,8 @@ class Header extends Component {
     } else if(this.props.page == 'form') {
       return (
         <div> 
-          <nav className="navbar navbar-expand-lg navbar-light bg-light text-center">
-            <a className="navbar-brand rebuild-bl" href="/">Project ReBuild</a>
+          <nav className="navbar navbar-expand-lg">
+            <a className="navbar-brand rebuild-bl font-weight-bold text-xl-left" href="/">Project ReBuild</a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item dropdown">

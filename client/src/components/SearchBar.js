@@ -34,13 +34,13 @@ class SearchBar extends React.Component {
         
     }
     render() {
-        
+
         return (
             
             <div className='container'>
                 <form className="form-inline my-2 my-lg-0 d-flex justify-content-center">
                     <input className="form-control mr-sm-2 " type="search" placeholder="Search for Items" aria-label="Search" value={this.state.search} onChange={this.handleSearchChange}/>
-                        <button className="btn btn-success my-2 my-sm-0" type="submit" onClick={this.handleSubmit}><Link to='/search'>START Search </Link></button>
+                        <button className="btn btn-success text-white my-2 my-sm-0" type="submit" onClick={this.handleSubmit}><Link to='/search'>START Search </Link></button>
                 </form>
             </div>
         )

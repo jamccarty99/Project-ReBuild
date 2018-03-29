@@ -2,7 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
 
+.container {
+  width: 1450px!important;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .product-box {
@@ -200,6 +205,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5d78e', en
 
 .rebuild-bl {
   color: #0093B2!important;
+  text-shadow: 1px 2px #B25300;
 }
 .rebuild-lt {
   color: #00D3FF!important;
@@ -209,4 +215,44 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5d78e', en
 }
 .rebuild-dk {
   color: #B25300!important;
+}
+.rebuild-bk {
+  background-color: #AFF1FF;
+}
+
+div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.btn {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.text-rebuild-lt {
+  color: #00D3FF!important;
+}
+.btn-rebuild-form {
+  color: white;
+  background-color: #FF7700;
+}
+.btn-rebuild-form:hover {
+  color: #0093B2;
+  background-color: #B25300;
+  border-color: #964803;
+}
+.btn-success {
+  color: white!important;
+}
+.btn-success:hover {
+  color: #FF7700!important;
+}
+.navbar {
+  background-color: rgb(215, 248, 255)!important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; 
+}
+#img-home {
+  opacity: 0.9;
 }
