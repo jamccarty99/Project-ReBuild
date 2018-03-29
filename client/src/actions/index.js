@@ -13,6 +13,7 @@ export function fetchProducts(search) {
 }
 
 export function addProductToReport(product) {
+
   return {
     type: ADD_PRODUCT,
     payload: product

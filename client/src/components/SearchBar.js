@@ -4,8 +4,6 @@ import { bindActionCreators } from "redux"
 import { fetchProducts } from '../actions'
 import { withRouter } from 'react-router'
 
-
-
 class SearchBar extends React.Component {
     constructor(props) {
         super(props)
@@ -30,9 +28,7 @@ class SearchBar extends React.Component {
     }
 
     render() {
-
         return (
-            
             <div className='container'>
                 <div className='row'>
                     <div className='col offset-md-3 col-6 '>

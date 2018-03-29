@@ -205,7 +205,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5d78e', en
 
 .rebuild-bl {
   color: #0093B2!important;
-  text-shadow: 1px 2px #B25300;
+  text-shadow: 1px 2px black;
 }
 .rebuild-lt {
   color: #00D3FF!important;
@@ -234,11 +234,16 @@ div.card {
 .text-rebuild-lt {
   color: #00D3FF!important;
 }
-.btn-rebuild-form {
+.btn-rebuild-report {
+  position: absolute;
+  top: 4;
+  right: 0;
   color: white;
   background-color: #FF7700;
+  float: right;
+
 }
-.btn-rebuild-form:hover {
+.btn-rebuild-report:hover {
   color: #0093B2;
   background-color: #B25300;
   border-color: #964803;
@@ -290,4 +295,38 @@ div.card {
 
 #cost {
   color: #964803;
+}
+
+
+.content:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  
+  display: block;
+  background-image: url('https://embed.widencdn.net/img/americanredcross/2udcdkg926/exact/home-fire-safety-recovery-header-1920x703.jpg?quality=100&u=1abbhl');
+  width: 1600px;
+  height: 800px;
+  
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navbar-header{
+  margin-left:5px;
+  width:100%;
 }

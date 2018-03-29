@@ -1,13 +1,11 @@
 import React from 'react'
 import { connect } from "react-redux"
-import ReactDOM from 'react-dom'
-import "../index.css"
-import Header from './Header'
-import SearchBar from './SearchBar'
-import 'bootstrap/dist/css/bootstrap.css'
-import Product from './product'
 import { bindActionCreators } from "redux"
 import { addProductToReport } from '../actions'
+import Header from './Header'
+import Product from './product'
+import 'bootstrap/dist/css/bootstrap.css'
+import "../index.css"
 
 class Products extends React.Component {
     render() {
@@ -15,8 +13,7 @@ class Products extends React.Component {
             <div>
                 <Header page={'product'}/>
                 <div className='container-fluid'>
-                    <div className="jumbotron-fluid">
-                        <img className='card-img' id='img-home' src='https://i.pinimg.com/originals/60/ce/d7/60ced7b94088b83805de4fe3c2380635.jpg' alt='red tile roofed house'/>
+                    <div className="jumbotron-fluid content">
                         <div className="card-img-overlay mt-5 pt-5">
                             <div className='row'>
                                 {

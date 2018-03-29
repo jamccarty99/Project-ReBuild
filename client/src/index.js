@@ -7,7 +7,7 @@ import promise from "redux-promise";
 import './index.css';
 import App from './components/App';
 import Products from "./components/Products"
-import Form from "./components/Form"
+import Report from "./components/Report"
 
 import rootReducers from "./reducers";
 import 'bootstrap/dist/css/bootstrap.css'
@@ -20,7 +20,7 @@ ReactDOM.render(
       <div>
         <Switch>
           <Route path="/products" component={Products} />
-          <Route path="/form" component={Form} />
+          <Route path="/report" component={Report} />
           <Route path="/" component={App} />
         </Switch>
       </div>

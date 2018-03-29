@@ -9,8 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header page={'home'}/>
-        <div className="jumbotron-fluid">
-          <img className='card-img' id='img-home' src='https://embed.widencdn.net/img/americanredcross/2udcdkg926/exact/home-fire-safety-recovery-header-1920x703.jpg?quality=100&u=1abbhl' alt='Family searching through remains of house after fire.'/>
+        <div className="jumbotron-fluid content">
           <div className="card-img-overlay mt-5 pt-2">
             <div>
               <div className="row mt-5 pt-5">
