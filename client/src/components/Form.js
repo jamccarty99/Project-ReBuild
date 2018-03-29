@@ -1,5 +1,5 @@
  import React from 'react'
- import ReactDataGrid from 'react-data-grid';
+
 // //import { Grid, Input, Select } from 'react-spreadsheet-grid'
  import 'bootstrap/dist/css/bootstrap.css'
  import Header from './Header'
@@ -13,15 +13,71 @@ const Form = () => {
     return (
         <div>
             <Header page={'form'}/>
-        
-            <ReactDataGrid
-                columns={columns}
-                rowGetter={rowGetter}
-                rowsCount={rows.length}
-            />
+            <div className="table-responsive">
+                <table className="table table-bordered">
+                    <thead className="thead-dark">
+                        <tr>
+                            <th scope="col">Item #</th>
+                            <th scope="col">Room</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Model</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Item Age (Year)</th>
+                            <th scope="col">Item Age (Month)</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Total Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>6</td>
+                                <td>Kitchen</td>
+                                <td>Kitchen Aide</td>
+                                <td>v6</td>
+                                <td>Coffee Maker</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>$75.32</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>6</td>
+                                <td>Kitchen</td>
+                                <td>Kitchen Aide</td>
+                                <td>v6</td>
+                                <td>Coffee Maker</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>$75.32</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                                <td>6</td>
+                                <td>Kitchen</td>
+                                <td>Kitchen Aide</td>
+                                <td>v6</td>
+                                <td>Coffee Maker</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>$75.32</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    )
-}
+
+//TODO: Use this code for a delete icon when delete function is enabled
+//<button type="button" class="close" aria-label="Close">
+//<span aria-hidden="true">&times;</span>
+//</button>
+
+
+
 // const rows=[
 //     { id: 'user1', formId: 3244, itemId: 1, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v7', title: 'Kitchen Aid Stand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
 //     { id: 'user1', formId: 3244, itemId: 2, room: 'Kitchen', brand: 'Kitchen Aid', model: 'v2', title: 'Hand Mixer', quantity: '1', itemYr: 1, itemMo: 4, cost: 257.93, positionId: 'Supervisor', managerId: '23425' },
@@ -32,7 +88,7 @@ const Form = () => {
 //     // and so on...
 // ];
  
-// class Form extends React.Component {
+// className Form extends React.Component {
 //     constructor(props) {
 //         super(props);
  
@@ -229,8 +285,8 @@ const Form = () => {
 //                 // Don't forget to blur focused cell after a value has been changed.
 //                 blurCurrentFocus={this.state.blurCurrentFocus}
 //             />
-//         )
-//     }
+        )
+    }
 // }
 
 export default Form

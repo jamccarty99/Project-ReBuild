@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
@@ -12,7 +11,7 @@ class SearchBar extends React.Component {
         super(props)
     
         this.state = {
-          search: ''
+            search: ''
         }
 
         this.handleSearchChange = this.handleSearchChange.bind(this);
@@ -21,27 +20,26 @@ class SearchBar extends React.Component {
 
     handleSearchChange(event) {
         this.setState({search: event.target.value});
-   
-        
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        
         this.props.fetchProducts(this.state);
-        console.log('handleSubmit log', this.state);
-        console.log(this.props);
-        
     }
+
     render() {
 
         return (
             
             <div className='container'>
-                <form className="form-inline my-2 my-lg-0 d-flex justify-content-center">
-                    <input className="form-control mr-sm-2 " type="search" placeholder="Search for Items" aria-label="Search" value={this.state.search} onChange={this.handleSearchChange}/>
-                        <button className="btn btn-success text-white my-2 my-sm-0" type="submit" onClick={this.handleSubmit}><Link to='/search'>START Search </Link></button>
-                </form>
+                <div className='row'>
+                    <div className='col offset-md-3 col-6 '>
+                        <form className="form-inline input-group input-group-lg my-2 my-lg-0 d-flex justify-content-center">
+                            <input className="form-control mr-lg-2" height='30px' width='75px' type="search" placeholder="Search for Items" aria-label="Search" value={this.state.search} onChange={this.handleSearchChange}/>
+                                <button className="btn btn-success text-white my-2 my-sm-0" type="submit" onClick={this.handleSubmit}><Link to='/search'>START Search </Link></button>
+                        </form>
+                    </div>
+                </div>
             </div>
         )
     }

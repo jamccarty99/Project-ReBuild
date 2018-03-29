@@ -1,14 +1,13 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import {faUtensils} from '@fortawesome/fontawesome-pro-regular'
-import {faTrashAlt} from '@fortawesome/fontawesome-pro-regular'
 import '../index.css';
 
 const Data = () => {
   return (
      
     <div className='container-fluid'>
+        <div className="jumbotron-fluid">
+          <img className='card-img' id='img-home' src='https://i.pinimg.com/originals/60/ce/d7/60ced7b94088b83805de4fe3c2380635.jpg' alt='red tile roofed house'/>
+          <div className="card-img-overlay mt-5 pt-5">
       {/* <div className="product-box">
           <a target="_blank" href="https://www.amazon.com/Black-Diamond-Momentum-Harness-Graphite/dp/B00LU59XF2?psc=1&SubscriptionId=AKIAJVKRTFMK3PCCYINQ&tag=jamccarty99-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B00LU59XF2">
               <img src="https://images-na.ssl-images-amazon.com/images/I/51YWnH%2BInOL._SL160_.jpg" width="120" height="160"/>
@@ -205,51 +204,93 @@ const Data = () => {
                   </a>
               </span>
           </div>
-      </div>
+      </div>*/}
 
-      <div className="product-box">
-          <a target="_blank" href="https://www.amazon.com/Black-Diamond-Solution-Climbing-Harness/dp/B019NUMT7Y?psc=1&SubscriptionId=AKIAJVKRTFMK3PCCYINQ&tag=jamccarty99-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B019NUMT7Y">
-              <img src="https://images-na.ssl-images-amazon.com/images/I/516Q94cVy0L._SL160_.jpg" width="120" height="160"/>
-          </a>
-          <div className="product-title">
-              <h3>Black Diamond Solution Climbing Harness - Men's - Slate X-Large</h3>
-          </div>
-          <p className="product-price">$69.95
-        </p>
-          <div>
-              <span className="a-button a-button-primary">
-                  <a target="_blank" href="https://www.amazon.com/Black-Diamond-Solution-Climbing-Harness/dp/B019NUMT7Y?psc=1&SubscriptionId=AKIAJVKRTFMK3PCCYINQ&tag=jamccarty99-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B019NUMT7Y">
-                      <span className="a-button-inner">
-                          <img src="http://webservices.amazon.com/scratchpad/assets/images/Amazon-Favicon-64x64.png" className="a-icon a-icon-shop-now"/>
-                          <input className="a-button-input" type="submit" value="Add to cart"/>
-                          <span className="a-button-text">ADD</span>
-                      </span>
-                  </a>
-              </span>
-          </div>
-      </div> */}
       <div className='row'>
-        <div className='col'>
-          <div className="card text-white bg-info mx-3"  height="160">
-            <img className='mx-2 pt-3 rounded mx-auto d-block' src="https://images-na.ssl-images-amazon.com/images/I/516Q94cVy0L._SL160_.jpg" width="120" height="160" alt="Black Diamond Solution Climbing Harness"/>
+        <div className='col-md-3'>
+          <div className="card text-white bg-info mb-5 mt-3 ml-5 mr-2">
+            <img className='pt-3 rounded mx-auto d-block' src="https://images-na.ssl-images-amazon.com/images/I/516Q94cVy0L._SL160_.jpg" width="auto" height="auto" alt="Black Diamond Solution Climbing Harness"/>
             <div className="card-body">
               <h5 className="card-title">Black Diamond Solution Climbing Harness</h5>
               <p className="card-text">Men's - Slate X-Large</p>
-              <a href="/form" className="btn btn-success">ADD</a>
+              <span className='ml-auto p-2 font-weight-bold text-xl-left mr-4' id='cost' >$69.95</span><a href="/form" className="btn btn-success">ADD</a>
             </div>
           </div>
         </div>
-        <div className='col'>
-          <div className="card text-white bg-info mx-3">
+        <div className='col-md-3'>
+          <div className="card text-white bg-info mb-5 mt-3 ml-5 mr-3">
             <img className='mx-2 pt-3 rounded mx-auto d-block' src="https://images-na.ssl-images-amazon.com/images/I/516Q94cVy0L._SL160_.jpg" width="auto" height="auto" alt="Black Diamond Solution Climbing Harness"/>
             <div className="card-body">
               <h5 className="card-title">Black Diamond Solution Climbing Harness</h5>
               <p className="card-text">Men's - Slate X-Large</p>
-              <a href="/form" className="btn btn-success">ADD</a>
+              <span className='ml-auto p-2 font-weight-bold text-xl-left mr-4' id='cost' >$69.95</span><a href="/form" className="btn btn-success">ADD</a>
             </div>
           </div>
         </div>
+        <div className='col-md-3'>
+          <div className="card text-white bg-info mb-5 mt-3 ml-5 mr-3">
+            <img className='mx-2 pt-3 rounded mx-auto d-block' src="https://images-na.ssl-images-amazon.com/images/I/516Q94cVy0L._SL160_.jpg" width="auto" height="auto" alt="Black Diamond Solution Climbing Harness"/>
+            <div className="card-body">
+              <h5 className="card-title">Black Diamond Solution Climbing Harness</h5>
+              <p className="card-text">Men's - Slate X-Large</p>
+              <span className='ml-auto p-2 font-weight-bold text-xl-left mr-4' id='cost' >$69.95</span><a href="/form" className="btn btn-success">ADD</a>
+            </div>
+          </div>
+        </div>
+        <div className='col-md-3'>
+          <div className="card text-white bg-info mb-5 mt-3 ml-5 mr-3">
+            <img className='mx-2 pt-3 rounded mx-auto d-block' src="https://images-na.ssl-images-amazon.com/images/I/516Q94cVy0L._SL160_.jpg" width="auto" height="auto" alt="Black Diamond Solution Climbing Harness"/>
+            <div className="card-body">
+              <h5 className="card-title">Black Diamond Solution Climbing Harness</h5>
+              <p className="card-text">Men's - Slate X-Large</p>
+              <span className='ml-auto p-2 font-weight-bold text-xl-left mr-4' id='cost' >$69.95</span><a href="/form" className="btn btn-success">ADD</a>
+            </div>
+          </div>
+        </div>
+        <div className='col-md-3'>
+          <div className="card text-white bg-info mb-5 mt-3 ml-5 mr-3">
+            <img className='mx-2 pt-3 rounded mx-auto d-block' src="https://images-na.ssl-images-amazon.com/images/I/516Q94cVy0L._SL160_.jpg" width="auto" height="auto" alt="Black Diamond Solution Climbing Harness"/>
+            <div className="card-body">
+              <h5 className="card-title">Black Diamond Solution Climbing Harness</h5>
+              <p className="card-text">Men's - Slate X-Large</p>
+              <span className='ml-auto p-2 font-weight-bold text-xl-left mr-4' id='cost' >$69.95</span><a href="/form" className="btn btn-success">ADD</a>
+            </div>
+          </div>
+        </div>
+        <div className='col-md-3'>
+          <div className="card text-white bg-info mb-5 mt-3 ml-5 mr-3">
+            <img className='mx-2 pt-3 rounded mx-auto d-block' src="https://images-na.ssl-images-amazon.com/images/I/516Q94cVy0L._SL160_.jpg" width="auto" height="auto" alt="Black Diamond Solution Climbing Harness"/>
+            <div className="card-body">
+              <h5 className="card-title">Black Diamond Solution Climbing Harness</h5>
+              <p className="card-text">Men's - Slate X-Large</p>
+              <span className='ml-auto p-2 font-weight-bold text-xl-left mr-4' id='cost' >$69.95</span><a href="/form" className="btn btn-success">ADD</a>
+            </div>
+          </div>
+        </div>
+        <div className='col-md-3'>
+          <div className="card text-white bg-info mb-5 mt-3 ml-5 mr-3">
+            <img className='mx-2 pt-3 rounded mx-auto d-block' src="https://images-na.ssl-images-amazon.com/images/I/516Q94cVy0L._SL160_.jpg" width="auto" height="auto" alt="Black Diamond Solution Climbing Harness"/>
+            <div className="card-body">
+              <h5 className="card-title">Black Diamond Solution Climbing Harness</h5>
+              <p className="card-text">Men's - Slate X-Large</p>
+              <span className='ml-auto p-2 font-weight-bold text-xl-left mr-4' id='cost' >$69.95</span><a href="/form" className="btn btn-success">ADD</a>
+            </div>
+          </div>
+        </div>
+        <div className='col-md-3'>
+          <div className="card text-white bg-info mb-5 mt-3 ml-5 mr-3">
+            <img className='mx-2 pt-3 rounded mx-auto d-block' src="https://images-na.ssl-images-amazon.com/images/I/516Q94cVy0L._SL160_.jpg" width="auto" height="auto" alt="Black Diamond Solution Climbing Harness"/>
+            <div className="card-body">
+                <h5 className="card-title">Black Diamond Solution Climbing Harness</h5>
+                <p className="card-text">Men's - Slate X-Large</p>
+                <span className='ml-auto p-2 font-weight-bold text-xl-left mr-4' id='cost' >$69.95</span><a href="/form" className="btn btn-success">ADD</a>
+            </div>
+          </div>
+        </div>
+        
     </div>
+</div>
+</div>
         
       
     </div>

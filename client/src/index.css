@@ -70,7 +70,7 @@ background: #d8dde6;
 display: block;
 padding: 0;
 /* vertical-align: middle; */
-height: 31px;
+height: 35px;
 *height: 29px;
 border: 1px solid;
 border-color: #bcc1c8 #bababa #adb2bb;
@@ -82,7 +82,7 @@ cursor: pointer;
 -moz-border-radius: 3px;
 border-radius: 3px;
 width: 100%;
-max-width: 130px;
+max-width: 80px;
 box-sizing: border-box;
 margin-top: 11px;
 }
@@ -254,5 +254,40 @@ div.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; 
 }
 #img-home {
-  opacity: 0.9;
+  opacity: 0.8;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+#cost {
+  color: #964803;
 }

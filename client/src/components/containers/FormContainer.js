@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import { Link } from 'react-router-dom'
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
 import { FETCH_PRODUCTS, FETCH_SINGLE_PRODUCT } from '../../actions/types'
+import Header from '../Header'
 
 
 class FormContainer extends React.Component {
@@ -13,14 +12,12 @@ class FormContainer extends React.Component {
         this.state = {
             price: '',
             room: '',
-            search: '',
-            footer: 1
+            search: ''
         }
 
         this.handleRoomChange = this.handleRoomChange.bind(this);
         this.handleSearchChange = this.handleSearchChange.bind(this);
         this.handlePriceChange = this.handlePriceChange.bind(this);
-        this.handleFooterChange = this.handleFooterChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -32,18 +29,6 @@ class FormContainer extends React.Component {
     }
     handlePriceChange(event) {
         this.setState({price: event.target.value});
-    }
-    handleFooterChange(event) {
-        this.setState({footer: event.target.value});
-
-
-        console.log('handleSubmit log', this.state);
-        this.props.FETCH_PRODUCTS(this.state).then(response => {
-            const products = this.props.products
-            for (let i=0;i<products.length;i++) {
-                this.props.FETCH_SINGLE_PRODUCT(products[i].id)
-            }
-        }).then(()=>this.props.history.push("/"))
     }
 
     handleSubmit(event) {
@@ -59,7 +44,8 @@ class FormContainer extends React.Component {
 
     render() {
         return (
-
+        <div>
+            <Header page={'product'}/>
             <div className="container search-form">
             <h1 className="text-center">Form Fields</h1>
             <form className="form-horizontal" >
@@ -68,10 +54,7 @@ class FormContainer extends React.Component {
                     <div className="col-sm-1">
                         <button type="submit" onClick={this.handleSubmit} className="btn btn-primary mt-2">Search</button>
                     </div>
-                    <div className="col-sm-3">
-                        <input type="text" placeholder="Search for Products" className="search" value={this.state.search} onChange={this.handleSearchChange} />
-                    </div>
-                <label className="col-sm-2 col-form-label mt-1">Room:</label>
+                <label className="col-sm-2 col-form-label mt-1">Select Current Room:</label>
                     <div className="col-sm-2">
                     <select className="form-control mt-3 mb-2" value={this.state.room} onChange={this.handleRoomChange}>
                         <option className="room" value="other">Other</option>
@@ -87,30 +70,10 @@ class FormContainer extends React.Component {
                         <option className="room" value="Garage">Garage</option>
                     </select>
                     </div>
-                <label className="col-sm-1 col-form-label mt-1">Quantity Lost:</label>
-                    <div className="col-sm-2.5">
-                    <select className="form-control mt-3" value={this.state.price} onChange={this.handlePriceChange}>
-                        <option className="price" value="lowest">Price: Low to High</option>
-                        <option className="price" value="highest">Price: High to Low</option>
-                    </select>
-                    </div>
-                <label className="col-sm-1 col-form-label mt-1">Item Age:</label>
-                    <div className="col-sm-2.5">
-                    <select className="form-control mt-3" value={this.state.price} onChange={this.handlePriceChange}>
-                        <option className="price" value="lowest">Price: Low to High</option>
-                        <option className="price" value="highest">Price: High to Low</option>
-                    </select>
-                    </div>
-                <label className="col-sm-1 col-form-label mt-1">Cost to Replace:</label>
-                    <div className="col-sm-2.5">
-                    <select className="form-control mt-3" value={this.state.price} onChange={this.handlePriceChange}>
-                        <option className="price" value="lowest">Price: Low to High</option>
-                        <option className="price" value="highest">Price: High to Low</option>
-                    </select>
-                    </div>
                 </div>
             </form>
             </div>
+        </div>
         )
     }
 }

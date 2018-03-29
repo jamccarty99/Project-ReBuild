@@ -5,7 +5,7 @@ const keys = require('./config/keys');
 const cors = require('cors')
 require('./models/Users');
 const bodyParser = require('body-parser')
-const secret = require('secret')
+const secret = require('./client/src/actions/secret')
 
 
 mongoose.connect(keys.mongoURI)
@@ -24,9 +24,9 @@ app.use(api)
 app.use(mainRoutes)
 
 var client = amazon.createClient({
-  awsTag: associateTag,
-  awsId: accessId,
-  awsSecret: secret
+  awsTag: secret.associateTag,
+  awsId: secret.accessId,
+  awsSecret: secret.secret
 });
 
 app.get('/amazon/:index', async (req, res) => {

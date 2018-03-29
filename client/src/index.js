@@ -8,7 +8,7 @@ import './index.css';
 import App from './components/App';
 import Product from "./components/Product"
 import Form from "./components/Form"
-import SearchBar from './components/SearchBar'
+import Component from './components/containers/Spreadsheet'
 
 import rootReducers from "./reducers";
 import FormContainer from "./components/containers/FormContainer";
@@ -21,6 +21,8 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
+          <Route path="/spreadsheet" component={Component} />
+          <Route path="/settings" component={FormContainer} />
           <Route path="/search" component={Product} />
           <Route path="/form" component={Form} />
           <Route path="/" component={App} />
