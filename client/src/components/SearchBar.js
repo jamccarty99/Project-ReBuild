@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
                     <div className='col offset-md-3 col-6 '>
                         <form className="form-inline input-group input-group-lg my-2 my-lg-0 d-flex justify-content-center">
                             <input className="form-control mr-lg-2" height='30px' width='75px' type="search" placeholder="Search for Items" aria-label="Search" value={this.state.search} onChange={this.handleSearchChange}/>
-                                <button className="btn btn-success text-white my-2 my-sm-0" type="submit" onClick={this.handleSubmit}>START Search</button>
+                                <button className="btn btn-success text-white my-2 my-sm-0" type="submit" onClick={this.handleSubmit}>SEARCH</button>
                         </form>
                     </div>
                 </div>

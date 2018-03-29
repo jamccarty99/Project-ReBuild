@@ -11,10 +11,10 @@ class Header extends Component {
       return (
         <div> 
           <nav className="navbar navbar-expand-lg navbar-header">
-            <a className="navbar-brand rebuild-bl font-weight-bold text-xl-left" href="/">Project ReBuild<img src='http://cblmoney.com/wp-content/themes/custom-builder-lending/images/house-img.png' height='50px' /></a>
+            <a className="navbar-brand rebuild-dk font-weight-bold text-xl-left" href="/">Project ReBuild<img src='http://cblmoney.com/wp-content/themes/custom-builder-lending/images/house-img.png' height='50px' /></a>
            
             
-                <Link to="/report" className="btn btn-lg btn-rebuild-report mr-5 ml-5 pull-right" type="button"  >Report</Link>
+                <Link to="/report" className="btn btn-lg btn-rebuild-report mr-5 ml-5 pull-right" type="button">Report</Link>
               
            
           </nav>
@@ -24,10 +24,10 @@ class Header extends Component {
       return (
         <div> 
           <nav className="navbar navbar-expand-lg">
-            <a className="navbar-brand rebuild-bl font-weight-bold text-xl-left" href="/">Project ReBuild<img src='http://cblmoney.com/wp-content/themes/custom-builder-lending/images/house-img.png' height='50px' /></a>
+            <a className="navbar-brand rebuild-dk font-weight-bold text-xl-left" href="/">Project ReBuild<img src='http://cblmoney.com/wp-content/themes/custom-builder-lending/images/house-img.png' height='50px' /></a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <SearchBar />
-              <Link to="/report" className="btn btn-lg btn-rebuild-report" type="button"  >Report</Link>
+              <Link to="/report" className="btn btn-lg btn-rebuild-report" type="button">Report</Link>
             </div>
           </nav>
         </div>
@@ -36,7 +36,7 @@ class Header extends Component {
       return (
         <div> 
           <nav className="navbar navbar-expand-lg">
-            <a className="navbar-brand rebuild-bl font-weight-bold text-xl-left" href="/" background-image='http://cblmoney.com/wp-content/themes/custom-builder-lending/images/house-img.png' width='50px' height='50px'>Project ReBuild<img src='http://cblmoney.com/wp-content/themes/custom-builder-lending/images/house-img.png' height='50px' /></a>
+            <a className="navbar-brand rebuild-dk font-weight-bold text-xl-left" href="/" background-image='http://cblmoney.com/wp-content/themes/custom-builder-lending/images/house-img.png' width='50px' height='50px'>Project ReBuild<img src='http://cblmoney.com/wp-content/themes/custom-builder-lending/images/house-img.png' height='50px' /></a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <SearchBar />
                 <a className="btn btn-lg rebuild-dk" href="#" ><img className='rounded-circle' height='40px' src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/settings-icon.png'/></a>

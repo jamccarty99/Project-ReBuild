@@ -13,7 +13,7 @@ class Products extends React.Component {
             <div>
                 <Header page={'product'}/>
                 <div className='container-fluid'>
-                    <div className="jumbotron-fluid content">
+                    <div className="jumbotron-fluid">
                         <div className="card-img-overlay mt-5 pt-5">
                             <div className='row'>
                                 {
