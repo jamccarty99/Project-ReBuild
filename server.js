@@ -1,4 +1,4 @@
-var amazon = require('amazon-product-api')
+const amazon = require('amazon-product-api')
 const mongoose = require('mongoose')
 const express = require('express')
 const keys = require('./config/keys');
@@ -18,25 +18,21 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(cors())
 
-const mainRoutes = require('./routes/main')
-const api = require("./routes/api")
-app.use(api)
-app.use(mainRoutes)
-
-var client = amazon.createClient({
+const client = amazon.createClient({
   awsTag: secret.associateTag,
   awsId: secret.accessId,
   awsSecret: secret.secret
 });
 
 app.get('/amazon/:index', async (req, res) => {
-    var products = await client.itemSearch({
+  var products = await client.itemSearch({
     keywords: req.query.title,
     searchIndex: req.params.index,
     condition: req.params.condition,
     responseGroup: 'EditorialReview,ItemAttributes,OfferFull,Images,Similarities'
-  }) 
-  res.send(products)
+  })
+
+  res.send(products);
 });
 
 const PORT = process.env.PORT || 5000;

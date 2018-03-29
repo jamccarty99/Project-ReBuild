@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../index.css'; 
@@ -50,7 +49,7 @@ class Header extends Component {
                 </li>
               </ul>
               <SearchBar />
-                <a className="btn btn-lg btn-rebuild-form mr-5 pr-5" href="/form" >View Form<span class="badge badge-pill badge-success invisible" >+</span></a>
+                <a className="btn btn-lg btn-rebuild-form mr-5 pr-5" href="/form" >View Form<span className="badge badge-pill badge-success invisible" >+</span></a>
             </div>
           </nav>
         </div>

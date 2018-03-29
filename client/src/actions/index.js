@@ -1,40 +1,20 @@
 import axios from "axios";
-import { FETCH_FORMS, FETCH_PRODUCTS, FETCH_SINGLE_FORM, FETCH_SINGLE_PRODUCT } from './types';
-
-const ROOT_URL = `http://localhost:5000/`
-
-
+import { FETCH_PRODUCTS, ADD_PRODUCT } from './types';
 
 export function fetchProducts(search) {
-  
+  search = search.split(' ').join('+')
+
+  const request = axios.get(`http://localhost:5000/amazon/All?title=${search}` )
+
   return {
     type: FETCH_PRODUCTS,
-    payload: search
+    payload: request
   };
 }
 
-export function fetchForms(req) {
-    const request = axios.get(`${ROOT_URL}`)
-  
-    return {
-      type: FETCH_FORMS,
-      payload: request
-    };
-  }
-  export function fetchSingleForm(id) {
-    const request = axios.get(`${ROOT_URL}/:id`)
-  
-    return {
-      type: FETCH_SINGLE_FORM,
-      payload: request
-    };
-  }
-
-export function fetchSingleProduct(id) {
-  const request = axios.get(`${ROOT_URL}/:id`)
-
+export function addProductToReport(product) {
   return {
-    type: FETCH_SINGLE_PRODUCT,
-    payload: request
+    type: ADD_PRODUCT,
+    payload: product
   };
 }
